@@ -4,6 +4,8 @@
   "description": "TypeScript + Micro + Graphql boilerplate",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "micro dist/index.js"
   },
