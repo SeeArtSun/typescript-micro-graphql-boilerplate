@@ -1,0 +1,12 @@
+{
+  "name": "typescript-micro-graphql-boilerplate",
+  "version": "1.0.0",
+  "description": "TypeScript + Micro + Graphql boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "SeeArt",
+  "license": "ISC"
+}
