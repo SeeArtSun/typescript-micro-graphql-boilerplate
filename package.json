@@ -6,8 +6,10 @@
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
+    "prestart:dev": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "micro dist/index.js"
+    "start": "micro dist/index.js",
+    "start:dev": "micro-dev dist/index.js"
   },
   "keywords": [],
   "author": "SeeArt",
@@ -17,5 +19,8 @@
     "@types/node": "^9.6.6",
     "micro": "^9.3.0",
     "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "micro-dev": "^2.2.2"
   }
 }
