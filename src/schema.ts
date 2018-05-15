@@ -1,3 +1,4 @@
+import { importSchema } from "graphql-import";
 import { makeExecutableSchema } from "graphql-tools";
 
 // Some fake data
@@ -13,10 +14,7 @@ const books = [
 ];
 
 // The GraphQL schema in string form
-const typeDefs = `
-  type Query { books: [Book] }
-  type Book { title: String, author: String }
-`;
+const typeDefs = importSchema("typeDefs/schema.graphql");
 
 // The resolvers
 const resolvers = {
