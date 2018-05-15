@@ -2,14 +2,13 @@
   "name": "typescript-micro-graphql-boilerplate",
   "version": "1.0.0",
   "description": "TypeScript + Micro + Graphql boilerplate",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
     "prestart:dev": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
-    "start:dev": "micro-dev dist/index.js"
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "SeeArt",
@@ -26,8 +25,5 @@
     "micro": "^9.3.0",
     "microrouter": "^3.1.2",
     "typescript": "^2.8.3"
-  },
-  "devDependencies": {
-    "micro-dev": "^2.2.2"
   }
 }
