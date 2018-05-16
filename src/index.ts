@@ -4,7 +4,12 @@ import micro, { send } from "micro";
 import { get, post, router } from "microrouter";
 import schema from "./schema";
 
-const graphqlHandler = microGraphql({ schema });
+const graphqlHandler = microGraphql({
+  schema,
+  cacheControl: {
+    defaultMaxAge: 60
+  }
+});
 const graphiqlHandler = microGraphiql({ endpointURL: "/graphql" });
 
 const engine = new ApolloEngine({
