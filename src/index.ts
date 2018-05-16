@@ -1,3 +1,4 @@
+import { ApolloEngine } from "apollo-engine";
 import { microGraphiql, microGraphql } from "apollo-server-micro";
 import micro, { send } from "micro";
 import { get, post, router } from "microrouter";
@@ -5,6 +6,12 @@ import schema from "./schema";
 
 const graphqlHandler = microGraphql({ schema });
 const graphiqlHandler = microGraphiql({ endpointURL: "/graphql" });
+
+const engine = new ApolloEngine({
+  logging: {
+    level: "DEBUG" // Engine Proxy logging level. DEBUG, INFO (default), WARN or ERROR.
+  }
+});
 
 const server = micro(
   router(
@@ -15,4 +22,7 @@ const server = micro(
   )
 );
 
-server.listen(8088);
+engine.listen({
+  httpServer: server,
+  port: 8088
+});
