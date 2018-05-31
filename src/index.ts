@@ -5,6 +5,7 @@ import { get, post, router } from "microrouter";
 import schema from "./schema";
 
 const graphqlHandler = microGraphql({
+  tracing: true,
   schema,
   cacheControl: true
 });
