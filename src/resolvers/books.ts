@@ -15,7 +15,8 @@ const books = () => {
   return booksFakeData;
 };
 
-const book = (_, { isbn }, __) => {
+const book = (_, { isbn }, __, { cacheControl }) => {
+  cacheControl.setCacheHint({ maxAge: 60 });
   return booksFakeData.find(book => book.isbn === isbn);
 };
 

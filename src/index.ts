@@ -6,9 +6,7 @@ import schema from "./schema";
 
 const graphqlHandler = microGraphql({
   schema,
-  cacheControl: {
-    defaultMaxAge: 60
-  }
+  cacheControl: true
 });
 const graphiqlHandler = microGraphiql({ endpointURL: "/graphql" });
 
