@@ -2,4 +2,5 @@
 
 type Query {
   books: [Book]
+  book(isbn: String!): Book
 }

@@ -1,9 +1,11 @@
 const booksFakeData = [
   {
+    isbn: "1",
     title: "Harry Potter and the Sorcerer's stone",
     author: "J.K. Rowling"
   },
   {
+    isbn: "2",
     title: "Jurassic Park",
     author: "Michael Crichton"
   }
@@ -13,4 +15,8 @@ const books = () => {
   return booksFakeData;
 };
 
-export { books };
+const book = (_, { isbn }, __) => {
+  return booksFakeData.find(book => book.isbn === isbn);
+};
+
+export { book, books };
