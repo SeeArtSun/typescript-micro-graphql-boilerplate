@@ -12,6 +12,11 @@ const graphqlHandler = microGraphql({
 const graphiqlHandler = microGraphiql({ endpointURL: "/graphql" });
 
 const engine = new ApolloEngine({
+  /**
+   * Log into Apollo Engine via your browser and create a service to get an API key.
+   * URL: https://engine.apollographql.com/
+   */
+  // apiKey: "API_KEY",
   logging: {
     level: "DEBUG" // Engine Proxy logging level. DEBUG, INFO (default), WARN or ERROR.
   }
